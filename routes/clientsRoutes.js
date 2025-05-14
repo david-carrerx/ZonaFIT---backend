@@ -56,7 +56,7 @@ router.put('/update-client/:id', async (req, res) => {
             return res(404).json({ msg: "Client not found"});
         }
 
-        res.status(200).json({ msg: "Client updated successfully"});
+        res.status(200).json({ msg: "Client updated successfully", client: updatedClient});
     } catch (e) {
         console.log(e);
         res.status(500).json({ msg: "Server error"});
